@@ -294,9 +294,28 @@
 <section id="hero" class="hero section">
   <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out" style="height: 100vh;">
       
-      <h1 style="font-size: 5em;  color: rgb(255, 255, 255); text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); font-weight: 700; animation: fadeIn 2s ease-in-out;">
-          Anantaa Infinite Possibilities
-      </h1>
+    <h1 style="font-size: 5em; color: rgb(255, 255, 255); text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); font-weight: 700; animation: fadeIn 2s ease-in-out; text-align: center;">
+      Anantaa Infinite Possibilities
+    </h1>
+
+<script>
+  // JavaScript to adjust font size dynamically based on the window width
+  window.addEventListener('resize', function() {
+    var h1 = document.querySelector('h1');
+    if (window.innerWidth <= 480) {
+      h1.style.fontSize = '2.5em'; // Small devices
+    } else if (window.innerWidth <= 768) {
+      h1.style.fontSize = '3.5em'; // Tablets
+    } else if (window.innerWidth <= 1024) {
+      h1.style.fontSize = '4.5em'; // Larger tablets
+    } else {
+      h1.style.fontSize = '5em'; // Default size for large screens
+    }
+  });
+
+  // Trigger the resize event to set the initial size
+  window.dispatchEvent(new Event('resize'));
+</script>
       <h2 style="color: rgb(255, 255, 255); text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); font-weight: 500; animation: fadeIn 2.5s ease-in-out;">
         Your Space Business Growth Partner
       </h2>
