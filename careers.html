@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Avantaa Infinite Possibilities</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="img/Anantaa_vert_wbg.png" rel="icon">
+  <link href="img/Anantaa_vert_wbg.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .btn-getstarted, .cta-btn, .btn-space {
+        background: linear-gradient(45deg, #007bff, #00d4ff);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-getstarted:hover, .cta-btn:hover, .btn-space:hover {
+        background: linear-gradient(45deg, #0056b3, #0099cc);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-getstarted:active, .cta-btn:active, .btn-space:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-control {
+        border-radius: 20px;
+        border: 1px solid #007bff;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.2s;
+    }
+
+    .form-control:focus {
+        border-color: #0056b3;
+        box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+    }
+
+    .btn-primary {
+        background: linear-gradient(45deg, #007bff, #00d4ff);
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        padding: 10px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary:hover {
+        background: linear-gradient(45deg, #0056b3, #0099cc);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-primary:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+      background-color: rgba(255, 255, 255, 0.774);
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-body {
+    background-color: rgba(255, 255, 255, 0.774);
+    padding: 2rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .list-unstyled li {
+    font-size: 1rem;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+  }
+
+  .list-unstyled li:hover {
+    color: rgb(255, 116, 2);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 991px) {
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+    }
+
+    .list-unstyled li {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .card-body {
+      padding: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.125rem;
+    }
+
+    .card-text {
+      font-size: 0.85rem;
+    }
+
+    .list-unstyled li {
+      font-size: 0.85rem;
+    }
+  }
+  /* Styling the feature list to look like a card */
+  .card {
+  background-color: rgba(255, 255, 255, 0.774); /* Semi-transparent background */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  margin-bottom: 30px;
+  width: calc(92% + 40px); /* Increases width without overlapping (adds extra width) */
+  max-width: 800px; /* Optional: limit the maximum width */
+  margin-left: auto; /* Center the card horizontally */
+  margin-right: auto; /* Center the card horizontally */
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+/*--------------------------------------------------------------
+# Hero Section with Parallax Effect (Updated with Reduced Height)
+--------------------------------------------------------------*/
+
+.hero1 {
+  width: 100%;
+  height: 50vh; /* Reduced height to 50vh */
+  position: relative;
+  padding: 40px 0 60px 0; /* Adjusted padding to suit 50vh height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("img/space/4147931-1.jpg") no-repeat center center;
+  background-size: cover; /* Ensures background covers the section */
+  background-position: center;
+  background-attachment: scroll; /* Fix for mobile devices */
+  overflow: hidden;
+}
+
+.hero1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay for better text visibility */
+  z-index: 1; /* Places overlay behind content */
+}
+
+.hero1 > * {
+  position: relative;
+  z-index: 2; /* Ensures content appears above the overlay */
+  color: white;
+}
+
+.hero1 h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  color: rgb(255, 255, 255); /* Ensures the color remains white */
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero1 h1 span {
+  color: var(--accent-color);
+}
+
+.hero1 p {
+  margin: 5px 0 30px 0;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero1 .btn-get-started {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 10px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero1 .btn-get-started:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+.hero1 .btn-watch-video {
+  font-size: 16px;
+  margin-left: 25px;
+  color: var(--default-color);
+  font-weight: 500;
+}
+
+.hero1 .btn-watch-video:hover {
+  color: var(--accent-color);
+}
+
+@media (max-width: 991px) {
+  .hero1 h1 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .hero1 p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero1 h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .hero1 p {
+    font-size: 16px;
+  }
+  .hero1 .btn-get-started,
+  .hero1 .btn-watch-video {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero1 {
+    background: url("../img/mobile-optimized.jpg") no-repeat center center;
+    background-size: contain; /* Ensure the background fits correctly on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero1 h1 {
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center; /* Center-aligns text */
+  }
+
+  .hero1 p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Center-aligns text */
+  }
+
+  .hero1 .btn-get-started,
+  .hero1 .btn-watch-video {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center; /* Ensures buttons are aligned centrally */
+  }
+}
+
+/* Specific Adjustments for 430x920 Viewport */
+@media (max-width: 430px) {
+  .hero1 h1 {
+    font-size: 26px; /* Adjust font size for small screens */
+    line-height: 32px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Enhance readability */
+  }
+
+  .hero1 p {
+    font-size: 14px; /* Adjust paragraph font size */
+    line-height: 20px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  }
+
+  .hero1 .btn-get-started,
+  .hero1 .btn-watch-video {
+    font-size: 12px; /* Smaller buttons for small screens */
+    padding: 8px 20px;
+    margin-top: 10px;
+  }
+}
+
+/* Optional for Very Tall Screens */
+@media (max-height: 920px) {
+  .hero1 {
+    padding: 30px 15px; /* Ensure spacing on tall screens */
+  }
+}
+
+/* Smooth Scrolling Animation for Mobile */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+:root {
+    --primary: #007bff;
+    --light-gray: #dcdcdc;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: minmax(250px, 300px);
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+
+/* Ensure responsiveness */
+#wrapper1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 300px;
+    max-width: 300px;
+    min-width: 250px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    background-color: white;
+}
+
+.banner-image {
+    height: 150px;
+    background-color: #f0f0f0;
+}
+
+.name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.description {
+    padding: 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+#card {
+    flex: 1 1 300px;
+    max-width: 300px;
+    min-width: 250px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    background-color: white;
+}
+
+.name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    #card {
+        margin-bottom: 15px;
+    }
+}
+
+</style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="img/Anantaa_hori_wbg-1.png" alt="">
+       
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">About</a></li>
+          <li><a href="index.html">Features</a></li>
+          <li><a href="index.html">Services</a></li>
+         <!--  <li><a href="#pricing">Pricing</a></li>
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> -->
+          <li><a href="index.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Login / Register Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="loginModalLabel">Login / Register</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <!-- Tabs Navigation -->
+                  <ul class="nav nav-tabs" id="loginRegisterTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Register</button>
+                      </li>
+                  </ul>
+                  <div class="tab-content" id="loginRegisterTabContent">
+                      <!-- Login Form -->
+                      <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                          <form>
+                              <div class="mb-3 mt-3">
+                                  <label for="login-email" class="form-label">Email address</label>
+                                  <input type="email" class="form-control" id="login-email" placeholder="Enter your email">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="login-password" class="form-label">Password</label>
+                                  <input type="password" class="form-control" id="login-password" placeholder="Enter your password">
+                              </div>
+                              <button type="submit" class="btn btn-primary w-100">Login</button>
+                          </form>
+                      </div>
+                      <!-- Register Form -->
+                      <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                          <form>
+                              <div class="mb-3 mt-3">
+                                  <label for="register-name" class="form-label">Full Name</label>
+                                  <input type="text" class="form-control" id="register-name" placeholder="Enter your full name">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="register-email" class="form-label">Email address</label>
+                                  <input type="email" class="form-control" id="register-email" placeholder="Enter your email">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="register-password" class="form-label">Password</label>
+                                  <input type="password" class="form-control" id="register-password" placeholder="Enter your password">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="register-confirm-password" class="form-label">Confirm Password</label>
+                                  <input type="password" class="form-control" id="register-confirm-password" placeholder="Confirm your password">
+                              </div>
+                              <button type="submit" class="btn btn-primary w-100">Register</button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+<!-- Hero Section -->
+<section id="hero1" class="hero1 section">
+  <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out" style="height: 100vh;">
+      
+      <h1 style="color: rgb(255, 255, 255); text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); font-weight: 700; animation: fadeIn 2s ease-in-out;">
+          careers
+      </h1>
+   
+    
+  </div>
+</section>
+<div id="wrapper1">
+
+  <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out" style="height: 20vh;">
+
+    <h1 style="color: rgb(255, 255, 255); text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); font-weight: 700; animation: fadeIn 2s ease-in-out;">Join Our Team</h1>
+    <h2 style="color: rgb(255, 255, 255); text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); font-weight: 700; animation: fadeIn 2s ease-in-out;">Full-Time Positions</h2>
+
+  </div>
+            <div class="card">
+                <h1 class="name">Project Management</h1>
+                <ul style="list-style-type: none;">
+                  <li><i class="bi bi-check2-all"></i> <span>Space Project Coordinators</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Partner Relations Managers</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Technical Program Managers</span></li>
+                  <li style="font-size: 0.95em;"><i class="bi bi-check2-all"></i> <span>Quality Assurance Specialists</span></li>
+        
+                </ul>
+              </div>
+            <div class="card">
+                <h1 class="name">Business Development</h1>
+                <ul style="list-style-type: none;">
+                  <li><i class="bi bi-check2-all"></i> <span>Partnership Managers</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Solution Architects</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Client Success Managers</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Market Research Analysts</span></li>
+                  <li><br></li>
+                  <li><br></li>
+
+                </ul>
+              </div>
+            <div class="card">
+                <h1 class="name">Technical Experts</h1>
+                <ul style="list-style-type: none;">
+                  <li><i class="bi bi-check2-all"></i> <span>Space Technology Specialists</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Technical Due Diligence Experts</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Documentation Specialists</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Compliance Officers</span></li>
+        
+                </ul>
+              </div>
+            <div class="card">
+                <h1 class="name">Keith Kitten</h1>
+                <ul style="list-style-type: none;">
+                  <li><i class="bi bi-check2-all"></i> <span>Technical Advisory</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Project Planning</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Design Review</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Compliance Guidance</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Risk Assessment</span></li>
+                  <li><br></li>
+
+                </ul>
+              </div>
+    </div>
+
+
+
+
+    
+<div id="wrapper1">
+  <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out" style="height: 20vh;">
+      
+      <h1 style="color: rgb(255, 255, 255); text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); font-weight: 700; animation: fadeIn 2s ease-in-out;">
+        Internship Programs
+      </h1>
+   
+    
+  </div>
+    <div class="card">
+        <h1 class="name">Space Business Internships</h1>
+        <ul style="list-style-type: none;">
+          <li><span>Duration: 3-6 months</span></li>
+          <li><span><b>Areas:</b></span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Project Coordination</span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Partner Management</span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Market Research</span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Technical Documentation</span></li>
+
+        </ul>
+       </div>
+    <div class="card">
+        <h1 class="name">Technical Coordination Internships</h1>
+        <ul style="list-style-type: none;">
+          <li><span>Duration: 4-6 months</span></li>
+          <li><span><b>Areas:</b></span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Technical Requirements Analysis</span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Quality Management</span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Vendor Assessment</span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Compliance Management</span></li>
+
+        </ul>
+    </div>
+    <div class="card">
+        <h1 class="name">Specialized Programs</h1>
+        <ul style="list-style-type: none;">
+          <li><span>Technical Advisory</span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Space Tourism Operations</span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Research Network Management</span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Test Facility Coordination</span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Customer Experience</span></li>
+
+        </ul>
+      </div>
+      <div class="card">
+        <h1 class="name">Benefits</h1>
+        <ul style="list-style-type: none;">
+          <li><span><b>Technical Advisory</b></span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Competitive Compensation</span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Global Partner Network Exposure</span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Professional Development</span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Health Insurance</span></li>
+          <li><i class="bi bi-check2-all"></i> <span>Flexible Work Hours</span></li>
+          <li><i class="bi bi-check2-all"></i> <span>International Travel Opportunities</span></li>
+
+        </ul>
+      </div>
+</div>
+
+
+    
+    <!-- /Hero Section -->
+
+   
+
+  </main>
+<br>
+<br>
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Anantaa Infinite Possibilities</span>
+            
+          </a>
+          <p>Headquarters:
+            Kanada Vyoma Tech
+            Bangalore Space Tech Park
+            Karnataka, India
+            </p>
+          <div class="footer-contact pt-3">
+            <img src="img/Anantaa_vert_wbg-1.png" alt="Anantaa Infinite Possibilities" width="150px" height="150px">
+          </div>
+
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-globe"></i></a>
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href=""><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4><i class="bi bi-globe"></i>Quick Links</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press Room</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4><i class="bi bi-phone-fill"></i>Business Inquiries</h4>
+          <p><strong>Email:</strong> <span>business@kanadavyoma.tech</span></p>
+          <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4><i class="bi bi-phone-fill"></i>Technical Support</h4>
+          <p><strong>Email:</strong> <span>support@kanadavyoma.tech</span></p>
+          <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4><i class="bi bi-phone-fill"></i>R&D Collaboration</h4>
+          <p><strong>Email:</strong> <span>research@kanadavyoma.tech</span></p>
+          <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>&copy; <span>Copyright</span> <span id="year"></span><strong class="px-1 sitename">ANANTAA Infinite Possibilities</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+       
+        Designed by <a href="https://jaibharatsolutions.com/">Jai Bharat Solutions</a>
+      </div>
+    </div>
+    <script>
+      // Dynamically update the year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
